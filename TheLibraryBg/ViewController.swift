@@ -22,8 +22,6 @@ class ViewController: UIViewController  {
     var bookGenre = ""
     var bookPageLength: Int?
     var myLib = Library()
-    
-//    var myBookNames = [String]()    // testing
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,11 +39,6 @@ class ViewController: UIViewController  {
         pageLengthText.text = ""
     }
     
-//    func promptUserOfUpdate() {
-//        updateLibraryLabel.hidden = false
-//        updateLibraryLabel.text = "New book, Saweet!"  // LOW -maybe add a timer to hide label text after 3 seconds
-//    }
-    
     func addBookToLibrary() {
         bookTitle = bookNameText.text!
         bookAuthor = authorText.text!
@@ -58,29 +51,12 @@ class ViewController: UIViewController  {
         updateLibraryLabel.text = "\(newBook.name) added to the libray"
 
         libraryListLabel.text = libraryListLabel.text! + "\(newBook.name)\n" // this should print book name
-        
-//        // testing adding only the newBook.name to myBookNames array
-//        let newBookName = newBook.name
-//        myBookNames.append(newBookName) // now confirm the book name is added to new array
-        
     }
-    
-    
-//    func applyBookNameToLabel() {
-//    
-//       //  this approach is returning the book: name to the console, but not putting the text on the label
-//        for var i=0; i <= myLib.booksInLibrary.count; i++ {
-//          libraryListLabel.text = libraryListLabel.text! + "\(myLib.listBooksInLibrary())"
-//        }
-//    }
     
     
     @IBAction func addBookToLibrary(sender: AnyObject) {
         addBookToLibrary()
-//        promptUserOfUpdate()
         clearOutText()
-        
-        //       libraryListLabel.text = myLib.listBooksInLibrary()
     }
     
     
@@ -91,11 +67,6 @@ class ViewController: UIViewController  {
     
     @IBAction func deleteBookButton(sender: AnyObject) {
         print("Delete button pressed")
-   //     applyBookNameToLabel()
-        
-        
-        //      myLib.listBooksInLibrary()
-              //^^this will access the book:name property, but I cannot assign to text field
         }
     }
 
