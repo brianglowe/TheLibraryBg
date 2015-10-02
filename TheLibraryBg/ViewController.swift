@@ -50,7 +50,7 @@ class ViewController: UIViewController  {
         
         updateLibraryLabel.text = "\(newBook.name) added to the libray"
 
-        libraryListLabel.text = libraryListLabel.text! + "\(newBook.name)\n" // this should print book name
+        libraryListLabel.text = libraryListLabel.text! + "\(newBook.name)\n"
     }
     
     
@@ -79,17 +79,11 @@ struct Book {
 
 class Library {
     var booksInLibrary = [Book]()
-    // var booksNameArray = []()
-    // var bookNames = [Book.name]()
     
     func listBooksInLibrary() {
         for book in booksInLibrary {
             print(book.name)
-            //   return(book.name)         // why cannot i not return the string?
-        }                               // Erika say that i need to take the book.name property and add it to a
-                                        // new array inside the Library class.  this array will hold specifically
-                                        // the book names.  This array can then be called and assigned to a label
-                                        // to display the book names
+        }
     }
 }
 
